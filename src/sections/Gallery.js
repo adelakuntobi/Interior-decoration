@@ -11,11 +11,11 @@ import Office from '../images/office.png'
 
 function Gallery() {
   return (
-    <section className="bg-primary py-20">
+    <section className="bg-primary py-20 px-5">
       <div className="container mx-auto md:w-10/12">
       <div className="text-center">
         <Heading someHeading="Our Gallery" />
-        <ul className="flex gap-12 items-center justify-center">
+        <ul className="hidden lg:flex gap-12 items-center justify-center">
           <li>All</li>
           <li>Living</li>
           <li>Kitchen</li>

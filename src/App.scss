@@ -49,3 +49,16 @@ footer{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 1024px) { 
+  .logo {
+    width: 250px !important;
+    height: 80px;
+  }
+}
+@media (max-width: 768px) { 
+  .logo {
+    width: 200px !important;
+    height: 60px;
+  }
+ }

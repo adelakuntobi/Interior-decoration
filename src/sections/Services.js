@@ -4,7 +4,8 @@ import ServicesInfo from '../components/servicesInfo'
 import Services1 from '../images/services.png'
 function Services() {
   return (
-    <section className="flex items-center justify-between container mx-auto md:w-10/12 py-16 gap-10">
+    <section className="px-5 flex lg:flex-row flex-col items-center 
+    justify-between container mx-auto md:w-10/12 py-16 gap-10">
       <div>
         <Heading someHeading="Services" />
         <div className="mt-10">
