@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+$primaryColor: #877A58;
+$lightWhite: #FAFAFA;
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  background-color: $lightWhite;
+}
+
+.bg-primary {
+  background-color: $primaryColor;
+}
+
+.text-primary {
+  color: $lightWhite;
+}
+
+.text-primary1 {
+  color: $primaryColor;
+}
+
+.logo {
+  background-color: #AEAC99;
+  color: $primaryColor;
+  width: 350px !important;
+  height: 100px;
+}
+
+nav ul {
+  font-family: 'Open Sans', sans-serif;
+  li {
+    border-bottom: 2px solid $lightWhite;
+    padding: 0 .25rem;
+  }
+  li.active {
+    font-weight: 800;
+    color: $primaryColor;
+  }
+  li:hover {
+    cursor: pointer;
+    border-bottom-color: $primaryColor;
+  }
+}
+footer{
+  border-top-color: $primaryColor;
+}
+.thefooter{
+  background: url('./images/footer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
