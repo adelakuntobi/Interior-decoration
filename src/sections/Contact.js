@@ -18,8 +18,8 @@ function Contact() {
           <div className="w-4/12">
             <h1 className="text-5xl mb-4 font-bold text-primary1">FAYDECOR</h1>
             <img src={map} alt="map" />
-            <a className="my-4 block" href="tel:08168527167">Phone: +234 123 6722 232</a>
-            <a className="my-4 block" href="mailto:faydecor@info.com" target="_blank">Email: faydecor@info.com</a>
+            <a className="my-4 block" href="tel:08168527167" rel="noopener noreferrer">Phone: +234 123 6722 232</a>
+            <a className="my-4 block" href="mailto:faydecor@info.com" rel="noopener noreferrer" target="_blank">Email: faydecor@info.com</a>
             <div className="flex gap-10">
               {/* Icons */}
               <FaFacebookF size="1.5rem" />
