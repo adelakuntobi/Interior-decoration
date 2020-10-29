@@ -5,8 +5,8 @@ import about from '../images/aboutus.png'
 
 function About() {
   return (
-    <section className="my-24 gap-12 flex lg:flex-row flex-col items-center justify-between container w-10/12 mx-auto">
-      <img src={about} alt="This is our store" />
+    <section id="about" className="my-24 lg:gap-x-12 gap-y-12 flex lg:flex-row flex-col items-center justify-between container w-10/12 mx-auto">
+      <img className="lg:w-1/2" src={about} alt="This is our store" />
       <div>
         <Heading someHeading="About Us" />
         <p className="mb-8">Faydecor is an Award-Winning company,

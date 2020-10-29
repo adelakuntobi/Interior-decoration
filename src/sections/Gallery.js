@@ -1,38 +1,55 @@
 import React from 'react'
-import Galleryitems from '../components/galleryitems'
+import { NavLink, Route, Switch } from 'react-router-dom'
 import Heading from '../components/heading'
-import Bathroom from '../images/bathroom.png'
-import Classic from '../images/classic.png'
-import Dining from '../images/dining.png'
-import Home from '../images/home.png'
-import Kitchen1 from '../images/kitchen1.png'
-import Office from '../images/office.png'
+import All from './Gallery sections/All'
+import Living from './Gallery sections/Living'
+import Kitchen from './Gallery sections/Kitchen'
+import Dining from './Gallery sections/Dining'
+import Bathroom from './Gallery sections/Bathroom'
+import Office from './Gallery sections/Office'
+import Furniture from './Gallery sections/Furniture'
 
 
 function Gallery() {
+  // const [isSmall, setIsSmall] = useState(false)
+  // const closeMore = () => {
+  //   if (isSmall === true) {
+  //     setIsSmall(
+  //       Opennav => Opennav = false
+  //     )
+  //   }
+  //   else {
+  //     setIsSmall(
+  //       Opennav => Opennav = true
+  //     )
+  //   }
+  // }
   return (
     <section className="bg-primary py-20 px-5">
       <div className="container mx-auto md:w-10/12">
-      <div className="text-center">
-        <Heading someHeading="Our Gallery" />
-        <ul className="hidden lg:flex gap-12 items-center justify-center">
-          <li>All</li>
-          <li>Living</li>
-          <li>Kitchen</li>
-          <li>Dining</li>
-          <li>Bathroom</li>
-          <li>Furniture</li>
-          <li>Office</li>
-        </ul>
-      </div>
-      <div className="pt-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <Galleryitems img={Classic} leadingText="Classic Interior Home" explain="Living"/>
-        <Galleryitems img={Kitchen1} leadingText="Classic Interior Kitchen" explain="Kitchen"/>
-        <Galleryitems img={Bathroom} leadingText="Classic Interior Bathroom" explain="Bathroom"/>
-        <Galleryitems img={Home} leadingText="Classic Interior Bedroom" explain="Bedroom"/>
-        <Galleryitems img={Office} leadingText="Classic Interior Office" explain="Office"/>
-        <Galleryitems img={Dining} leadingText="Classic Interior Bathroom" explain="Dining"/>
-      </div>
+        <div className="text-center">
+          <Heading someHeading="Our Gallery" />
+          <div className="hidden lg:flex gap-12 items-center justify-center">
+            <NavLink activeClassName="active-g" exact to="/">All</NavLink>
+            <NavLink activeClassName="active-g" to="/living">Living</NavLink>
+            <NavLink activeClassName="active-g" to="/kitchen">Kitchen</NavLink>
+            <NavLink activeClassName="active-g" to="/dining">Dining</NavLink>
+            <NavLink activeClassName="active-g" to="/bathroom">Bathroom</NavLink>
+            <NavLink activeClassName="active-g" to="/furniture">Furniture</NavLink>
+            <NavLink activeClassName="active-g" to="/office">Office</NavLink>
+          </div>
+        </div>
+        <div className={"pt-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-height md:max-h-full"}>
+          <Switch>
+            <Route exact path="/" component={All} />
+            <Route exact path="/living" component={Living} />
+            <Route exact path="/kitchen" component={Kitchen} />
+            <Route exact path="/dining" component={Dining} />
+            <Route exact path="/bathroom" component={Bathroom} />
+            <Route exact path="/furniture" component={Furniture} />
+            <Route exact path="/office" component={Office} />
+          </Switch>
+        </div>
       </div>
     </section>
   )
