@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { Redirect, Route } from 'react-router-dom';
 import './App.scss';
+import useLocalStorage from './useLocalStorage';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
@@ -11,19 +12,24 @@ import Services from './sections/Services';
 
 
 function App() {
-  const [isDark, setIsDark] = useState(false)
+  
+  const [isDark, setIsDark] = useLocalStorage('mode', true);
   const changeMode = () => {
     if (isDark === true) {
+      // localStorage.clear()
       setIsDark(
         darkness => darkness = false
-      )
+        )
     }
     else {
       setIsDark(
-        darkness => darkness = true
-      )
+        darkness => darkness = true,
+        )
+      }
     }
-  }
+
+
+// console.log("From outside" ,isLocal)
   return (
     <div className="App">
       <div className={isDark ? "darkmode" : ""}>
@@ -41,7 +47,8 @@ function App() {
         <Services />
         <Contact />
         <Footer />
-        <h1 className={isDark ? "text-black fixed bg-gray-100 bottom-0 right-0 py-4 px-10 cursor-pointer" :"fixed bg-black bottom-0 right-0 py-4 px-10 text-white cursor-pointer"} onClick={changeMode}>{isDark ? "Light Mode" : "Dark Mode"}</h1>
+        <h1 className={isDark ? "text-black fixed bg-gray-100 bottom-0 right-0 py-4 px-10 cursor-pointer" :"fixed bg-black bottom-0 right-0 py-4 px-10 text-white cursor-pointer"} 
+        onClick={changeMode}>{isDark ? "Light Mode" : "Dark Mode"}</h1>
       </div>
     </div>
   );
