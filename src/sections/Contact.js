@@ -10,7 +10,7 @@ function Contact() {
   return (
     <section id="contact" className="thefooter p-6 lg:p-20">
       <div className="bg-white pb-20 px-5 lg:px-10 container mx-auto ">
-        <div className="text-center pt-20 pb-16">
+        <div className="text-center pt-20 pb=8 md:pb-16">
           <Heading someHeading="Contact Us" />
         </div>
         <div className="flex lg:flex-row flex-col">
