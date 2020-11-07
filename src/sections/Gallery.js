@@ -25,11 +25,11 @@ function Gallery() {
   //   }
   // }
   return (
-    <section className="bg-primary py-20 px-5">
+    <section id="gallery" className="bg-primary py-20 px-5">
       <div className="container mx-auto md:w-10/12">
         <div className="text-center">
           <Heading someHeading="Our Gallery" />
-          <div className="hidden lg:flex gap-12 items-center justify-center">
+          <div className="hidden lg:grid grid-flow-col gap-12 items-center justify-center">
             <NavLink activeClassName="active-g" exact to="/">All</NavLink>
             <NavLink activeClassName="active-g" to="/living">Living</NavLink>
             <NavLink activeClassName="active-g" to="/kitchen">Kitchen</NavLink>
